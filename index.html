@@ -197,13 +197,13 @@
 
     /* ══════════ RESPONSIVE ══════════ */
     @media (max-width: 720px) {
-      :root { --shell-gutter: .5rem; --shell-edge: var(--shell-gutter); --shell-mark-width: 56px; --shell-top-width: 38px; --symbol-particle-density: .65; }
+      :root { --shell-gutter: .5rem; --shell-edge: var(--shell-gutter); --shell-mark-width: 68px; --shell-top-width: 46px; --symbol-particle-density: .65; }
+      /* Symbols match the Mm mark on phones too, as they do on desktop (1:1). */
+      .nav-grid { --sym: 68px; --col-gap: 4.5rem; --label-h: .8rem; }
+      .nav-label { font-size: 0.58rem; letter-spacing: 0.18em; }
     }
 
     @media (max-width: 640px) {
-      .nav-grid { --sym: 68px; --col-gap: 4.5rem; --label-h: .8rem; }
-      .nav-label { font-size: 0.58rem; letter-spacing: 0.18em; }
-
       .stage { min-height: 100vh; min-height: 100dvh; padding: 4rem 1rem 2rem; }
     }
 

@@ -371,7 +371,7 @@ body > main {
 .site-footer b { font-weight: 700; }
 
 @media (max-width: 720px) {
-  :root { --shell-edge: var(--shell-gutter); --shell-mark-width: 56px; --shell-top-width: 2rem; --shell-gutter: .5rem; --shell-radius: 1rem; --shell-gap: .65rem; --symbol-particle-density: .65; }
+  :root { --shell-edge: var(--shell-gutter); --shell-mark-width: 68px; --shell-top-width: 2.3rem; --shell-gutter: .5rem; --shell-radius: 1rem; --shell-gap: .65rem; --symbol-particle-density: .65; }
   body { padding: .8rem calc(var(--shell-edge) + var(--shell-mark-width) + var(--shell-gutter) + var(--shell-inset)) var(--shell-pad-bottom) calc(var(--shell-gutter) + var(--shell-inset)) !important; }
   .page-header, .pub-section, .works-section, body > main { margin-bottom: 1rem !important; }
   .page-header { min-height: 0 !important; padding: 3.5rem 0 2rem !important; }
