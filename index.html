@@ -134,7 +134,12 @@
       font-size: 0.62rem;
       line-height: var(--label-h);
       font-weight: 500;
-      letter-spacing: 0.2em;
+      /* Letter-spacing also trails the last letter, which pushes centred text
+         left by half of it; the negative margin takes that trailing space back
+         so the word centres under its symbol. */
+      --label-ls: 0.2em;
+      letter-spacing: var(--label-ls);
+      margin-right: calc(var(--label-ls) * -1);
       text-transform: uppercase;
       white-space: nowrap;
       color: var(--ink);
@@ -200,7 +205,7 @@
       :root { --shell-gutter: .5rem; --shell-edge: var(--shell-gutter); --shell-mark-width: 68px; --shell-top-width: 46px; --symbol-particle-density: .65; }
       /* Symbols match the Mm mark on phones too, as they do on desktop (1:1). */
       .nav-grid { --sym: 68px; --col-gap: 4.5rem; --label-h: .8rem; }
-      .nav-label { font-size: 0.58rem; letter-spacing: 0.18em; }
+      .nav-label { font-size: 0.58rem; --label-ls: 0.18em; }
     }
 
     @media (max-width: 640px) {
