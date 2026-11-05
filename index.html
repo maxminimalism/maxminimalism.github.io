@@ -90,6 +90,10 @@
       align-items: center;
       justify-content: center;
       padding: 4rem 2rem;
+      /* The reserved scrollbar gutter (see html above) narrows the page on the
+         right only; padding the left by the same --gutter (set at the top of
+         <body>) centres the symbols on the window. 0 with overlay scrollbars. */
+      padding-left: calc(2rem + var(--gutter, 0px));
     }
 
     /* The three symbol centres form an equilateral triangle: the bottom pair
@@ -167,7 +171,7 @@
        that would push the page past 100dvh into a scrollbar. */
     .site-footer {
       position: absolute;
-      left: 0;
+      left: var(--gutter, 0px);
       right: 0;
       bottom: var(--shell-edge);
       text-align: center;
@@ -209,7 +213,7 @@
     }
 
     @media (max-width: 640px) {
-      .stage { min-height: 100vh; min-height: 100dvh; padding: 4rem 1rem 2rem; }
+      .stage { min-height: 100vh; min-height: 100dvh; padding: 4rem 1rem 2rem calc(1rem + var(--gutter, 0px)); }
     }
 
     /* Keyed off the attribute only — the <head> boot script sets data-theme
@@ -240,6 +244,7 @@
   </style>
 </head>
 <body>
+  <script>(function(){var r=document.documentElement,s=function(){r.style.setProperty('--gutter',Math.min(Math.max(innerWidth-r.offsetWidth,0),30)+'px')};s();addEventListener('resize',s)})()</script>
 
   <main class="stage">
     <nav class="nav-grid" aria-label="Primary">
